@@ -2,7 +2,7 @@
 
 - **Desplegado en netlify**
 - **Link**: https://dasshboard.netlify.app/
-- **El dashboard tiene filtros para ordenar alfabéticamente los nombres de usuarios y mail. Cuenta con una barra de búsqueda que busca en todas las columnas**
+- **El dashboard tiene filtros para ordenar alfabéticamente los nombres de usuarios y pais. Cuenta con una barra de búsqueda que busca en todas las columnas**
 
 ---
 
