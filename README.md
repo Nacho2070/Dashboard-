@@ -5,4 +5,3 @@
 
 ---
 - **Para ejecutar localmente abrir index.html en el navegador**.
-- **Una lista de tecnologías utilizadas**.
