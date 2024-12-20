@@ -126,4 +126,3 @@ export function sortTable(columnIndex) {
   currentPage = 0;
   renderTable(filteredRows);
 }
-
