@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Styles.css">
+</head>
+<body>
+        <header>
+            <h1>User Dashboard</h1>
+            
+            <div id="search">
+                <form method="GET" class="search-container" id="searchForm">
+                    <input type="text" id="myInput" placeholder="Buscar">
+                    <input type="submit" value="Buscar" class="SearchButton">
+                    <label >
+                        <input type="reset"  id="buttonReset" value=""/>
+                    </label>  
+                </form>
+            </div>
+        </header>
+        <section>
+            <table class="table table-striped table-class" id= "table-id" >
+                <col width="20px" />
+                <col width="150px" />
+                <col width="150px" />
+                <col width="250px" />
+                <col width="150px" />
+                <col width="150px" />
+                <col width="150px" />
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th id="nameFilter" class="filters">Name
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" width="15px" height="15px">
+                                    <path d="M14 2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v2.172a2 2 0 0 0 .586 1.414l2.828 2.828A2 2 0 0 1 6 9.828v4.363a.5.5 0 0 0 .724.447l2.17-1.085A2 2 0 0 0 10 11.763V9.829a2 2 0 0 1 .586-1.414l2.828-2.828A2 2 0 0 0 14 4.172V2Z" />
+                                </svg>  
+                        </th>
+                        <th>Last Name</th>
+                        <th>Email</th>
+                        <th>Gender</th>
+                        <th>IP Address</th>
+                        <th id="countryFilter" class="filters">Country
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" width="15px" height="15px">
+                                    <path d="M14 2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v2.172a2 2 0 0 0 .586 1.414l2.828 2.828A2 2 0 0 1 6 9.828v4.363a.5.5 0 0 0 .724.447l2.17-1.085A2 2 0 0 0 10 11.763V9.829a2 2 0 0 1 .586-1.414l2.828-2.828A2 2 0 0 0 14 4.172V2Z" />
+                                </svg>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody id="data-output">
+    
+                </tbody>
+            </table>
+            
+            <!-- Start Pagination -->
+            <ul class="pagination">
+                <button id="prev">Anterior</button>
+                <span type="number" id="page-number" ></span>
+                <button id="next">Siguiente</button>
+            </ul>    
+        </section>
+        <div id="countDiv"></div>
+        
+    <!-- Modal  -->
+    <div class="popUpContainer_principal" id="modalPopUP">
+        <div class="popUpContainer">
+            <div class="containerTitlePopUp">
+                <h1>Agregar o modificar producto</h1>
+            </div>
+            
+            <div class="containerInputs_popUP">
+            <input placeholder="ingrese un nombre" id="nombre" type="text"/>
+            <input placeholder="ingrese una imagen" id="img" type="text"/>
+
+            <input placeholder="precio" value="0" id="precio"  type="number"/>
+            <select id="categoria">
+                <option>Seleccciona una categoria</option>
+                <option>Gaseosas</option>
+                <option>Hamburguesas</option>
+                <option>Papas</option>
+            </select>
+            </div>
+            <div class="containerButtonsPoUp">
+                <button class="buttonPopUP cancel" id ="cancelButton"> Cancelar</button>
+                <button class="buttonPopUP accept" id ="acceptButton"> Aceptar</button>
+                <button class="buttonPopUP delete" id ="deleteButton"> Elimnar</button>
+
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="main.js"></script>
+    <script type="module" src="Filters.js"></script>
+</body>
+</html>
